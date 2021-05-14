@@ -58,6 +58,7 @@ static duint ismystring(int argc, duint* argv, void* userdata)
 	@return: true if the memory address is a pointer to the string stored.
 	*/
 
+	MessageBoxA(0, "paso", "paso", 0x40);
 	char* argparse;
 	duint step;
 	duint va;
@@ -91,7 +92,7 @@ static duint ismystring(int argc, duint* argv, void* userdata)
 	}
 
 	for (std::vector<MyString>::iterator it = protector.begin(); it != protector.end(); ++it) {
-
+		MessageBoxA(0, it->text, "log", 0x40);
 		if (it->code == argv[2] && strcmp(it->text, argparse) == 0) {
 			_plugin_logputs("[" PLUGIN_NAME "] Condition successful");
 			return true;
