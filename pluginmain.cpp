@@ -30,5 +30,5 @@ PLUG_EXPORT void plugsetup(PLUG_SETUPSTRUCT* setupStruct)
     hMenuDisasm = setupStruct->hMenuDisasm;
     hMenuDump = setupStruct->hMenuDump;
     hMenuStack = setupStruct->hMenuStack;
-    pluginSetup();
+    //pluginSetup();
 }
